@@ -7,15 +7,13 @@ let mainWindow;
 function createWindow(){
   mainWindow = new BrowserWindow({
     width: 1200,
-    height: 300
+    height: 630
   });
+
+  mainWindow.setResizable(false);
 
   mainWindow.loadURL('http://localhost:3000');
 
-  app.setAboutPanelOptions({
-    applicationName: "MTGVisualDeckbuilder",
-    applicationVersion: "0.0.1"
-  })
 
   mainWindow.on('closed', () => mainWindow = null);
 }
