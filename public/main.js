@@ -6,14 +6,15 @@ let mainWindow;
 
 function createWindow(){
   mainWindow = new BrowserWindow({
+    frame: false,
     width: 1200,
     height: 630
   });
 
+  //mainWindow.maximize();
   mainWindow.setResizable(false);
 
   mainWindow.loadURL('http://localhost:3000');
-
 
   mainWindow.on('closed', () => mainWindow = null);
 }
